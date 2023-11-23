@@ -1,10 +1,11 @@
 import serial
-from httprequests import change_state, get_state
-from urls import LIGHT_ID_1, LIGHT_ID_2, LIGHT_ID_3, LIGHT_ID_4, LIGHT_ID_5, LIGHT_ID_6
+
+from client.httprequests import change_state
+from client.urls import LIGHT_ID_1, LIGHT_ID_2, LIGHT_ID_3, LIGHT_ID_4, LIGHT_ID_5, LIGHT_ID_6
 
 ser = serial.Serial('COM5', 9600)
 
-lights = [LIGHT_ID_6, LIGHT_ID_5]
+lights = [LIGHT_ID_1, LIGHT_ID_2, LIGHT_ID_3, LIGHT_ID_4, LIGHT_ID_5, LIGHT_ID_6]
 NR_OF_LIGHTS = len(lights)
 states = [True, True, True, True, True, True]
 ALL_LIGHTS_OFF = False
